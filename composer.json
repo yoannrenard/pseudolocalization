@@ -1,0 +1,26 @@
+{
+    "name": "yoannrenard/pseudolocalization",
+    "description": "Pseudo language generator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yoann Renard",
+            "email": "renard.yoann@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "YoannRenard\\Pseudolocalization\\": "src"
+        },
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
+    },
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.0"
+    }
+}
