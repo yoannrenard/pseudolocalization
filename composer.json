@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "YoannRenard\\Pseudolocalization\\": "src"
+            "YoannRenard\\Pseudolocalization\\": "src/"
         },
         "exclude-from-classmap": [
             "/tests/"
