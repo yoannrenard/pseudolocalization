@@ -23,7 +23,6 @@ $ vendor/bin/phpunit
 Using the default pseudolocalization translation : 
 
 ```php
-use YoannRenard\Pseudolocalization\Transformer\TransformerChain;
 use YoannRenard\Pseudolocalization\TranslatorFactory;
 
 $translator = TranslatorFactory::create();
@@ -42,7 +41,7 @@ echo $translator->trans('Lorem ipsum');
   // [£ÓRÉM ÌÞ§ÛM Lorem]
 ```
 
-Using the whole bunch of transformer :
+Using the whole bunch of transformers :
 
 ```php
 use YoannRenard\Pseudolocalization\Config;
@@ -57,7 +56,7 @@ $translator = new Translator(new TransformerChain([
     TransformerFactory::create('expand'),
     TransformerFactory::create('enclose_in_bracket'),
 ]));
-echo $translator->trans('Lorem ipsum')."\n";
+echo $translator->trans('Lorem ipsum');
   // [£ôRèM Ìƥ§úM Lorem]
 ```
 
