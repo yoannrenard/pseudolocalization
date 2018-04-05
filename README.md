@@ -12,13 +12,13 @@ Pseudo language generator
 $ composer require yoannrenard/pseudolocalization
 ```
 
-## Test it
+## Test it
 
 ```bash
 $ vendor/bin/phpunit
 ```
 
-## Usage
+## Usage
 
 Using the default pseudolocalization translation : 
 
