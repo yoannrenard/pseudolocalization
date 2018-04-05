@@ -11,7 +11,7 @@ class EncloseInBracketsTransformerTest extends TestCase
      */
     public function it_returns_its_name()
     {
-        TestCase::assertSame('enclose_with_bracket', EncloseInBracketsTransformer::getName());
+        TestCase::assertSame('enclose_in_bracket', EncloseInBracketsTransformer::getName());
     }
 
     /**

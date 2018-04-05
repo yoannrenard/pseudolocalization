@@ -17,6 +17,6 @@ class EncloseInBracketsTransformer implements TransformerInterface
      */
     public static function getName()
     {
-        return 'enclose_with_bracket';
+        return 'enclose_in_bracket';
     }
 }
