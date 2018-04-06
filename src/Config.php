@@ -3,10 +3,12 @@
 namespace YoannRenard\Pseudolocalization;
 
 use YoannRenard\Pseudolocalization\Exception\InvalidArgumentException;
+use YoannRenard\Pseudolocalization\Transformer\AlternateCaseTransformer;
+use YoannRenard\Pseudolocalization\Transformer\UpperCaseTransformer;
 
 class Config
 {
-    public static $supportedCaseList = ['same', 'alternate', 'upper'];
+    public static $supportedCaseList = [AlternateCaseTransformer::CASE_TRANSFORMER, UpperCaseTransformer::CASE_TRANSFORMER];
 
     /** @var bool */
     private $diacriticCharacters;
@@ -26,14 +28,12 @@ class Config
      * @param bool   $expandString
      * @param bool   $encloseWithBracket
      */
-    public function __construct($diacriticCharacters = true, $caseConversion = 'alternate', $expandString = true, $encloseWithBracket = true)
+    public function __construct($diacriticCharacters = true, $caseConversion = '', $expandString = true, $encloseWithBracket = true)
     {
-        $caseConversion = null === $caseConversion ? 'same' : $caseConversion;
-
         if (!is_bool($diacriticCharacters)) {
             throw InvalidArgumentException::booleanArgument('diacriticCharacters');
         }
-        if (!in_array($caseConversion, self::$supportedCaseList, true)) {
+        if (!empty($caseConversion) && !in_array($caseConversion, self::$supportedCaseList, true)) {
             throw InvalidArgumentException::inArrayArgument('caseConversion', self::$supportedCaseList);
         }
         if (!is_bool($expandString)) {

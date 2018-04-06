@@ -18,16 +18,13 @@ class TranslatorFactoryTest extends TestCase
      */
     public function it_creates_a_Translator_from_a_default_Config()
     {
-        $config = new Config();
-
         TestCase::assertEquals(
             new Translator(new TransformerChain([
-                TransformerFactory::create(AlternateCaseTransformer::getName()),
                 TransformerFactory::create(DiacriticsTransformer::getName()),
                 TransformerFactory::create(ExpandTransformer::getName()),
                 TransformerFactory::create(EncloseInBracketsTransformer::getName()),
             ])),
-            TranslatorFactory::create($config)
+            TranslatorFactory::create()
         );
     }
 
@@ -36,7 +33,7 @@ class TranslatorFactoryTest extends TestCase
      */
     public function it_creates_a_Translator_from_an_empty_Config()
     {
-        $config = new Config(false, 'same', false, false);
+        $config = new Config(false, '', false, false);
 
         TestCase::assertEquals(
             new Translator(new TransformerChain()),

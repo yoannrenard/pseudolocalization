@@ -4,6 +4,8 @@ namespace YoannRenard\Pseudolocalization\Transformer;
 
 class AlternateCaseTransformer implements TransformerInterface
 {
+    const CASE_TRANSFORMER = 'alternate';
+
     /**
      * {@inheritdoc}
      */

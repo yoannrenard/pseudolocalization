@@ -23,8 +23,8 @@ class InvalidArgumentExceptionTest extends TestCase
     public function it_returns_an_InvalidArgumentException_as_the_argument_is_not_in_array()
     {
         TestCase::assertEquals(
-            new InvalidArgumentException('The field `caseConversion` must be in (``, `alternate`, `upper`)'),
-            InvalidArgumentException::inArrayArgument('caseConversion', ['', 'alternate', 'upper'])
+            new InvalidArgumentException('The field `caseConversion` must be in (`alternate`, `upper`)'),
+            InvalidArgumentException::inArrayArgument('caseConversion', ['alternate', 'upper'])
         );
     }
 }

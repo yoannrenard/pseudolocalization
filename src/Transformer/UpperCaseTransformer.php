@@ -4,6 +4,8 @@ namespace YoannRenard\Pseudolocalization\Transformer;
 
 class UpperCaseTransformer implements TransformerInterface
 {
+    const CASE_TRANSFORMER = 'upper';
+
     /**
      * {@inheritdoc}
      */
