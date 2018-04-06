@@ -5,21 +5,21 @@ namespace YoannRenard\Pseudolocalization\Transformer;
 class AlternateCaseTransformer implements TransformerInterface
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function transform($message)
     {
         $transformedMessage = '';
 
         foreach (str_split($message) as $key => $letter) {
-            $transformedMessage .= 0 == $key%2? strtoupper($letter) : $letter;
+            $transformedMessage .= 0 === $key%2 ? strtoupper($letter) : $letter;
         }
 
         return $transformedMessage;
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function getName()
     {

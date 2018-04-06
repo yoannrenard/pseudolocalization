@@ -9,12 +9,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 OEF;
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function transform($message)
     {
-        if (0 === strlen($message))
+        if (0 === strlen($message)) {
             return '';
+        }
 
         return sprintf(
             '%s %s',
@@ -24,7 +25,7 @@ OEF;
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function getName()
     {

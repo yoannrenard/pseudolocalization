@@ -2,10 +2,7 @@
 
 return PhpCsFixer\Config::create()
     ->setRules(array(
-//        '@Symfony' => true,
-        // Do not use '@Symfony' as 'binary_operator_spaces' is more a pain
         '@PSR2' => true,
-//        'binary_operator_spaces' => true,
         'blank_line_after_opening_tag' => true,
         'blank_line_before_statement' => [
             'statements' => ['return'],
@@ -119,7 +116,6 @@ return PhpCsFixer\Config::create()
         'ordered_imports' => true,
 
         'date_time_immutable' => true,
-        'declare_strict_types' => true,
         'no_closing_tag' => true,
 
         'no_useless_else' => true,
