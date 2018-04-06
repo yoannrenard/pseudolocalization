@@ -1,5 +1,7 @@
 # Pseudolocalization
 
+[![Build Status](https://travis-ci.org/yoannrenard/pseudolocalization.svg?branch=master)](https://travis-ci.org/yoannrenard/pseudolocalization)  
+
 Pseudo language generator
 
 ## Requirements
@@ -55,4 +57,3 @@ $translator = new Translator(new TransformerChain([
 echo $translator->trans('Lorem ipsum');
   // £ôRèM Ìƥ§úM
 ```
-
