@@ -28,12 +28,12 @@ class Config
      */
     public function __construct($diacriticCharacters = true, $caseConversion = 'alternate', $expandString = true, $encloseWithBracket = true)
     {
-        $caseConversion = null == $caseConversion? 'same':$caseConversion;
+        $caseConversion = null === $caseConversion ? 'same' : $caseConversion;
 
         if (!is_bool($diacriticCharacters)) {
             throw InvalidArgumentException::booleanArgument('diacriticCharacters');
         }
-        if (!in_array($caseConversion, self::$supportedCaseList)) {
+        if (!in_array($caseConversion, self::$supportedCaseList, true)) {
             throw InvalidArgumentException::inArrayArgument('caseConversion', self::$supportedCaseList);
         }
         if (!is_bool($expandString)) {

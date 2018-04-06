@@ -19,7 +19,7 @@ class Translator implements TranslatorInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function trans($message)
     {

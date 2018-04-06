@@ -5,7 +5,7 @@ namespace YoannRenard\Pseudolocalization\Transformer;
 class EncloseInBracketsTransformer implements TransformerInterface
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function transform($message)
     {
@@ -13,7 +13,7 @@ class EncloseInBracketsTransformer implements TransformerInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function getName()
     {

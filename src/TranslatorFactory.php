@@ -13,7 +13,7 @@ use YoannRenard\Pseudolocalization\Transformer\UpperCaseTransformer;
 class TranslatorFactory implements TranslatorFactoryInterface
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function create(Config $config = null)
     {
