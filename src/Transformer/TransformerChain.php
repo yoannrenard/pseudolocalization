@@ -4,7 +4,7 @@ namespace YoannRenard\Pseudolocalization\Transformer;
 
 class TransformerChain implements \IteratorAggregate
 {
-    /** @var iterable */
+    /** @var array */
     private $transformers;
 
     /**

@@ -29,7 +29,7 @@ use YoannRenard\Pseudolocalization\TranslatorFactory;
 
 $translator = TranslatorFactory::create();
 echo $translator->trans('Lorem ipsum');
-  // [£ôRèM Ìƥ§úM Lorem]
+  // [£ôřè₥ ïƥƨú₥ Lorem ip]
 ```
 
 Using a config DTO class :  

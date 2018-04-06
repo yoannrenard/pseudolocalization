@@ -38,7 +38,7 @@ class ConfigTest extends TestCase
      * @test
      *
      * @expectedException \YoannRenard\Pseudolocalization\Exception\InvalidArgumentException
-     * @expectedExceptionMessage The field `caseConversion` must be in (`same`, `alternate`, `upper`)
+     * @expectedExceptionMessage The field `caseConversion` must be in (`alternate`, `upper`)
      */
     public function it_throws_an_exception_as_caseConversion_is_not_valid()
     {
@@ -56,7 +56,7 @@ class ConfigTest extends TestCase
      */
     public function it_throws_an_exception_as_expandString_is_not_a_boolean($value)
     {
-        new Config(false, null, $value);
+        new Config(false, '', $value);
     }
 
     /**
@@ -70,7 +70,7 @@ class ConfigTest extends TestCase
      */
     public function it_throws_an_exception_as_encloseWithBracket_is_not_a_boolean($value)
     {
-        new Config(false, null, false, $value);
+        new Config(false, '', false, $value);
     }
 
     /**
@@ -79,7 +79,7 @@ class ConfigTest extends TestCase
     public function it_instantiates_a_config_with_default_values()
     {
         TestCase::assertEquals(
-            new Config(true, 'alternate', true, true),
+            new Config(true, '', true, true),
             new Config()
         );
     }
