@@ -11,13 +11,34 @@ class AlternateCaseTransformer implements TransformerInterface
      */
     public function transform($message)
     {
-        $transformedMessage = '';
+        /**
+         * @param string $message
+         * @return string
+         */
+        $handler = function ($message) {
+            $transformedMessage = '';
 
-        foreach (str_split($message) as $key => $letter) {
-            $transformedMessage .= 0 === $key%2 ? strtoupper($letter) : $letter;
+            foreach (str_split($message) as $key => $letter) {
+                $transformedMessage .= 0 === $key%2 ? strtoupper($letter) : $letter;
+            }
+
+            return $transformedMessage;
+        };
+
+
+        // Exclude HTML tags
+        if (0 < preg_match('/<.*>/', $message)) {
+            return preg_replace_callback(
+                '/>([^<]*)/si',
+                function ($matches) use ($handler) {
+                    return $handler($matches[0]);
+                },
+                $message
+            );
         }
 
-        return $transformedMessage;
+
+        return $handler($message);
     }
 
     /**

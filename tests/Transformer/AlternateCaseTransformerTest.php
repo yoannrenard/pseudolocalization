@@ -23,6 +23,7 @@ class AlternateCaseTransformerTest extends TestCase
             ['', null],
             ['', ''],
             ['LoReM IpSuM DoLoR SiT AmEt, CoNsEcTeTuR AdIpIsCiNg eLiT...', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...'],
+            ['<a href="http://www.google.com/">LOrEm <u>iPsUm</u></a>', '<a href="http://www.google.com/">Lorem <u>ipsum</u></a>'],
         ];
     }
 

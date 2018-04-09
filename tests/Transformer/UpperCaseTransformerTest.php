@@ -23,6 +23,7 @@ class UpperCaseTransformerTest extends TestCase
             ['', null],
             ['', ''],
             ['LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT...', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...'],
+            ['<a href="http://www.google.com/">LOREM <u>IPSUM</u></a>', '<a href="http://www.google.com/">Lorem <u>ipsum</u></a>'],
         ];
     }
 
