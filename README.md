@@ -28,6 +28,7 @@ Using the default pseudolocalization translation :
 use YoannRenard\Pseudolocalization\TranslatorFactory;
 
 $translator = TranslatorFactory::create();
+
 echo $translator->trans('Lorem ipsum');
   // [£ôřè₥ ïƥƨú₥ Lorem ip]
 ```
@@ -39,6 +40,7 @@ use YoannRenard\Pseudolocalization\Config;
 use YoannRenard\Pseudolocalization\TranslatorFactory;
 
 $translator = TranslatorFactory::create(new Config(true, 'upper', true, true));
+
 echo $translator->trans('Lorem ipsum');
   // [£ÓRÉM ÌÞ§ÛM Lorem]
 ```
@@ -54,6 +56,7 @@ $translator = new Translator(new TransformerChain([
     TransformerFactory::create('alternate_case'),
     TransformerFactory::create('diacritics'),
 ]));
+
 echo $translator->trans('Lorem ipsum');
   // £ôRèM Ìƥ§úM
 ```
