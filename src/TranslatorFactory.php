@@ -33,7 +33,7 @@ class TranslatorFactory implements TranslatorFactoryInterface
         if ($config->expandString()) {
             $transformerChain->add(TransformerFactory::create(ExpandTransformer::getName()));
         }
-        if ($config->encloseWithBracket()) {
+        if ($config->encloseInBracket()) {
             $transformerChain->add(TransformerFactory::create(EncloseInBracketsTransformer::getName()));
         }
 

@@ -64,11 +64,11 @@ class ConfigTest extends TestCase
      * @dataProvider notBooleanDataProvider
      *
      * @expectedException \YoannRenard\Pseudolocalization\Exception\InvalidArgumentException
-     * @expectedExceptionMessage The field `encloseWithBracket` must be a boolean
+     * @expectedExceptionMessage The field `encloseInBracket` must be a boolean
      *
      * @param mixed $value
      */
-    public function it_throws_an_exception_as_encloseWithBracket_is_not_a_boolean($value)
+    public function it_throws_an_exception_as_encloseInBracket_is_not_a_boolean($value)
     {
         new Config(false, '', false, $value);
     }

@@ -20,15 +20,15 @@ class Config
     private $expandString;
 
     /** @var bool */
-    private $encloseWithBracket;
+    private $encloseInBracket;
 
     /**
      * @param bool   $diacriticCharacters
      * @param string $caseConversion
      * @param bool   $expandString
-     * @param bool   $encloseWithBracket
+     * @param bool   $encloseInBracket
      */
-    public function __construct($diacriticCharacters = true, $caseConversion = '', $expandString = true, $encloseWithBracket = true)
+    public function __construct($diacriticCharacters = true, $caseConversion = '', $expandString = true, $encloseInBracket = true)
     {
         if (!is_bool($diacriticCharacters)) {
             throw InvalidArgumentException::booleanArgument('diacriticCharacters');
@@ -39,14 +39,14 @@ class Config
         if (!is_bool($expandString)) {
             throw InvalidArgumentException::booleanArgument('expandString');
         }
-        if (!is_bool($encloseWithBracket)) {
-            throw InvalidArgumentException::booleanArgument('encloseWithBracket');
+        if (!is_bool($encloseInBracket)) {
+            throw InvalidArgumentException::booleanArgument('encloseInBracket');
         }
 
         $this->diacriticCharacters = $diacriticCharacters;
         $this->caseConversion      = $caseConversion;
         $this->expandString        = $expandString;
-        $this->encloseWithBracket  = $encloseWithBracket;
+        $this->encloseInBracket  = $encloseInBracket;
     }
 
     /**
@@ -84,8 +84,8 @@ class Config
     /**
      * @return bool
      */
-    public function encloseWithBracket()
+    public function encloseInBracket()
     {
-        return $this->encloseWithBracket;
+        return $this->encloseInBracket;
     }
 }
